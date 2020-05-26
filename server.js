@@ -27,6 +27,6 @@ var dia = new Date();
 console.log("Iniciando a API TecFit. "+String(dia.getDate()).padStart(2, '0')+"/"+String(dia.getMonth() + 1).padStart(2, '0')+"/"+dia.getFullYear()+" "+dia.getHours()+":"+dia.getMinutes()+":"+dia.getSeconds());
 
 
-server.listen(process.env.PORT || 3333, ()=>{
+app.listen(process.env.PORT || 3333, ()=>{
   console.log('Listen in port 3333.')
 });
