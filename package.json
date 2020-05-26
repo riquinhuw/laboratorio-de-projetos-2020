@@ -1,0 +1,21 @@
+{
+  "name": "tecfitapi",
+  "version": "1.0.0",
+  "description": "API para TecFit",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "init": "^0.1.2",
+    "path": "^0.12.7",
+    "pg": "^8.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
