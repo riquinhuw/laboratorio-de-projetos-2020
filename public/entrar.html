@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/entrar.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>GoFit</title>
+</head>
+<body>
+    <!--cabeçalho-->
+    <header>
+        <section class="header">
+            <div class="container">
+                <img src="../img/Logo1.png">
+                <button type="button" class="btn-login" onclick="direcionarHome();" >Voltar</button>
+            </div>
+
+            <div class="login">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="login()">Entrar</button>
+                        <button type="button" class="toggle-btn" onclick="cadastrar()">Cadastrar</button>
+    
+                    </div>
+                    <!--Formulario do Login-->
+                        <form id="login" class="input-group">
+                            <input type="text" class="input-field" placeholder="Nome de Usuario" required>
+                            <input type="text" class="input-field" placeholder="Senha" required>
+                            <input type="checkbox" class="check-box"><span>Lembrar de mim</span>
+                            <button type="submit" class="submit-btn">Entrar</button>
+        
+                        </form>
+                    <!--Formulario do cadastrese-->
+                        <form id="cadastrar" class="input-group">
+                            <input type="text" class="input-field" placeholder="Nome de Usuario" required>
+                            <input type="email" class="input-field" placeholder="Email" required>
+                            <input type="text" class="input-field" placeholder="Senha" required>
+                            <input type="checkbox" class="check-box"><span>Li e Concordo com os termos e condições</span>
+                            <button type="submit" class="submit-btn">Cadastrar</button>
+        
+                        </form>
+                </div> 
+                
+            </div>
+
+            
+        </section>
+
+
+       
+
+    </header>
+
+    <script src="./js/entrar.js"></script>
+    
+    
+</body>
+</html>

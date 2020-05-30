@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/exercicio.css">
+    <title>Entrar</title>
+</head>
+<body>
+    <header>
+        <section class="header">
+            <div class="container">
+                <img src="../img/Logo1.png">
+                <button type="button" class="btn-login">sair</button>
+            </div>
+
+            <div class="login">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn"></div>
+                        <button type="button" class="toggle-btn" onclick="exercicio()">Exercicios</button>
+                        <button type="button" class="toggle-btn" onclick="exercicioant()">Exercicios Anteriores</button>
+                        <button type="button" class="toggle-btn" onclick="meuperfil()">Meu Perfil</button>
+    
+                    </div>
+                    <!--Formulario dos Exercicios-->
+                        <form id="exercicio" class="input-group">
+                            <input type="checkbox" class="checkbox" id="ex1" name="ex1" value="ex1">
+                            <input type="text" class="input-exe" placeholder="EX1">
+                            <input type="checkbox" class="checkbox" id="ex2" name="ex2" value="ex2">
+                            <input type="text" class="input-exe" placeholder="EX2">
+                            <input type="checkbox" class="checkbox" id="ex3" name="ex3" value="ex3">
+                            <input type="text"  class="input-exe" placeholder="EX3">
+                            <input type="checkbox" class="checkbox" id="ex4" name="ex4" value="ex4">
+                            <input type="text" class="input-exe" placeholder="EX4">
+                            <input type="checkbox"  class="checkbox" id="ex5" name="ex5" value="ex5">
+                            <input type="text" class="input-exe" placeholder="EX5">
+
+                            <button type="submit" class="submit-btne">Ok</button>
+                            
+                            
+        
+                        </form>
+                    <!--Formulario dos Exercicios Anteriores-->
+                        <form id="exercicioant" class="input-group">
+                            <input type="text" class="input-field" placeholder="EX1" required>
+                            <input type="text" class="input-field" placeholder="EX2" required>
+                            <input type="text" class="input-field" placeholder="EX3" required>
+                            <input type="text" class="input-field" placeholder="EX4" required>
+                            <input type="text" class="input-field" placeholder="EX5" required>
+                            <input type="text" class="input-field" placeholder="EX6" required>
+                            <input type="text" class="input-field" placeholder="EX7" required>
+                            
+                            
+        
+                        </form>
+
+                        <!--Formulario de MeuPerfil-->
+                        <form id="meuperfil" class="input-group">
+                            <h3>Nome:</h3>
+                            <input type="text" class="input-field" placeholder="Nome Completo" required>
+                            <h3>Login:</h3>
+                            <input type="text" class="input-field" placeholder="Login" required>
+                            <h3>Email:</h3>
+                            <input type="email" class="input-field" placeholder="Email" required>
+                            <h3>Senha:</h3>
+                            <input type="text" class="input-field" placeholder="Senha" required>
+                            <h3>Celular:</h3>
+                            <input type="number" class="input-field" placeholder="Telefone" required>
+                            <button type="submit" class="submit-btn">Salvar</button>
+        
+                        </form>
+
+
+                </div> 
+                
+            </div>
+
+            
+        </section>
+
+
+       
+
+    </header>
+    <script src="./js/exercicios.js"></script>
+</body>
+</html>

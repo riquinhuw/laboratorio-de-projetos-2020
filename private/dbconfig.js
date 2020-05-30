@@ -1,4 +1,4 @@
-require('dotenv/config');//Apontando para o servidor de testes, o user DASHBOARD do de produção está com problemas.
+require('dotenv/config');
 module.exports = {
     user: process.env.PGUSER,
     host: process.env.PGHOST,

@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: #000;
+    
+}
+
+.header{
+    height: 100vh;
+
+    background-image: url('/fundo3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 20px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.header img{
+    width: 100px;
+    float: left;
+    
+}
+
+.btn-login{
+    width: 100px;
+    padding: 8px 0;
+    outline: none !important;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    float: right;
+
+}
+
+.btn-login:hover{
+    color: #000;
+    border: 2px solid black
+}
+
+
+.header h1{
+    padding-top: 200px;
+    padding-bottom: 0;
+    font-size: 55px;
+}
+
+.header p {
+    margin: 20px 0;
+    font-size: 30px;
+
+}
+
+/*LOGIN*/
+
+.login{
+    height: 100%;
+    width: 100%;
+    
+    background-position: center;
+    background-position: cover;
+    position: absolute;
+}
+
+.form-box{
+    width: 580px;
+    height: 600px;
+    position: relative;
+    margin: 6% auto;
+    background: white;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.button-box{
+    width: 500px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px #fbff008e;
+    border-radius: 30px
+}
+
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    font-size: 14px;
+}
+
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 160px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 253, 123, 0.897),#ffad06);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.input-group{
+    top:180px;
+    position: absolute;
+    width: 400px;
+    transition: 0.5s;
+}
+
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 60px;
+    border: 1px solid rgba(252, 214, 2, 0.479);
+    outline: none;
+    background: transparent;
+}
+
+.submit-btn{
+    width: 85%;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 20px;
+    margin-left: 150px;
+    background: linear-gradient(to bottom,rgba(255, 253, 123, 0.897), #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.input-group h3{
+    width: 60%;
+    padding: 0 0;
+    margin:0 0;
+    justify-content: left;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: gray;
+}
+
+#exercicio{
+    left: 50px;
+}
+
+#exercicioant{
+    left: 600px;
+}
+
+#meuperfil{
+    left: 600px;
+}
+
+.input-group h3{
+    color: black;
+    font-size: 15px;
+    margin: 0;
+    
+
+}
+
+/*AQUI TAO AS COISAS DO EXERCICIOS*/
+
+.input-exe{
+    
+    width: 100%;
+    padding: 10px;
+    margin: 5px 50px;
+    border: 1px solid rgba(252, 214, 2, 0.479);
+    outline: none;
+    background: transparent;
+}
+
+.checkbox{
+    display:grid;
+    padding: 10px;
+    margin: 5px 50px;
+}
+
+.submit-btne{
+    width: 85%;
+    padding: 15px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 20px;
+    margin-left: 100px;
+    background: linear-gradient(to bottom,rgba(255, 253, 123, 0.897), #ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+
+
+span{
+    color: #777;
+
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+    font-family: 'Poppins', sans-serif;
+}

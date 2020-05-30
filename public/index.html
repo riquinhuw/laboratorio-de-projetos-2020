@@ -2,29 +2,184 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INFORAMÇÕES</title>
+    <title>GoFit</title>
 </head>
 <body>
-    <h1>Listas de Rotas da API</h1>
-    <br><br>
-    <div id="escolhas">
-        <a href="/listarAlunos">/listarAlunos</a>
-        <p>Requisição via GET, lista os alunos(json)</p>
-        <br>
-        <a href="/listarTreinos">/listarTreinos</a>
-        <p>Requisição via GET, lista os treinos(json)</p>
-        <br>
-        <a href="/buscarTreinosPorAluno/1">/buscarTreinosPorAluno/1</a>
-        <p>Requisição via GET passando o ID após o "/", lista os ids que se ligam(json)</p>
-        <br>
-        <a href="/buscarAluno/1">/buscarAluno/1</a>
-        <p>Requisição via GET passando o ID após o "/", Mostra o aluno pelo id(json)</p>
-        <br>
-        <a href="/buscarTreino/1">/buscarTreino/1</a>
-        <p>Requisição via GET passando o ID após o "/", Mostra o aluno pelo id(json)</p>
-    </div>
+    <section class="header">
+        <div class="container">
+            <img src="../img/Logo1.png">
+            <button type="button" class="btn-login" onclick="direcionarLogin();" >Login</button>
+        </div>
+        <h1>GoFit</h1>
+        <p>VENHA FAZER PARTE DESSE TIME </p>
+    </section>
 
-    <script src="index.js"></script>
+    <section class="planos">
+        <h1>CONHEÇA NOSSOS PLANOS</h1>
+        <div class="container">
+        <div class="row">
+        <div class="col-md-4">
+            <div class="planos-box">
+            <div class="planos-img">
+            <img src="../img/plano1.jpg">
+            <!--<div class="price">
+            <p>R$80/MÊS</p>
+            </div>-->
+            <div class="planos-detalhes">
+                <h4>Plano Yellow</h4>
+                <p>Treine o quanto quiser na sua unidade, sem taxa de cancelamento e uma consulta com especialista 1 vêz por ano
+                   <br> ATIVIDADES <br>
+                    ▸ Área de musculação e aeróbicos
+                    ▸ Aulas especiais
+                    ▸ Sem taxa de cancelamento
+                    <br>R$80/MÊS
+                   </p>
+                <div>
+                    <span>QUERO ESSE PLANO</span>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="planos-box">
+                <div class="planos-img">
+                <img src="../img/plano2.jpg">
+                <!--<div class="price">
+                <p>R$80/MÊS</p>
+                </div>-->
+                <div class="planos-detalhes">
+                    <h4>Plano Grey</h4>
+                    <p>Treine em qualquer unidade GoFit na América Latina.
+                        <br> ATIVIDADES <br>
+                    ▸ Área de musculação e aeróbicos
+                    ▸ Aulas especiais
+                    ▸ Área de musculação e aeróbicos
+                    ▸ Aulas de Ginástica
+                    ▸ Cadeira de massagem
+                        <br>R$100/MÊS
+                       </p>
+                    <div>
+                        <span>QUERO ESSE PLANO</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div> 
+        <div class="col-md-4">
+            <div class="planos-box">
+                <div class="planos-img">
+                <img src="../img/plano3.jpg">
+                <!--<div class="price">
+                <p>R$80/MÊS</p>
+                </div>-->
+                <div class="planos-detalhes">
+                    <h4>Plano Black</h4>
+                    <p>Alem de todos os beneficios do Plano Black você ainda tem direito a um personal e consultas regulares com especialistas
+                        <br> ATIVIDADES <br>
+                        ▸ Área de musculação e aeróbicos
+                        ▸ Aulas especiais
+                        ▸ Camiseta Black
+                        ▸ Treinar com um amigo
+                        <br>R$150/MÊS
+                       </p>
+                    <div>
+                        <span>QUERO ESSE PLANO</span>
+                    </div>
+                </div>
+                </div>
+            </div> 
+        </div>    
+        </div>
+        </div>
+
+    </section>
+
+    <section class="galeria">
+        <h1>Estrutura</h1>
+        <div class="container">
+        <div class="row">
+        <div class="col-md-3">
+            <div class="galeria-box">
+                <img src="../img/personal.png">
+                <h4>Personal</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="galeria-box">
+                <img src="../img/ginastica.png">
+                <h4>Aerobico</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="galeria-box">
+                <img src="../img/esteira.jpg">
+                <h4>Estrutura</h4>
+            </div>
+        </div> 
+        <div class="col-md-3">
+            <div class="galeria-box">
+                <img src="../img/ginastica2.jpg">
+                <h4>Intenso</h4>
+            </div>
+        </div>  
+        </div>  
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner-faixa">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                    <h2>Aproveite nossos descontos</h2>
+                    <p>Não perca essa oportunidade Venha fazer parte da Equipe GoFit</p>
+                    </div>
+                    <div class="col-md-4">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="rodape">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Sobre Nós</h4>
+                <p>A GoFit é uma academia com mais de 10 anos no mercado
+                    localizada bem no centro da cidade de Recife, graças ao seu brilhante trabalho
+                    a marca GoFit é a maior academia do Brasil estando presente em todos os estados
+                </p>
+            </div>
+            <div class="col-md-4">
+                <h4>Fale Conosco</h4>
+                <p><a href="#">Facebook: GoFitOfficial</a></p>
+                <p><a href="#">Email gofit@gmail.com</a></p>
+                <p><a href="#">Whattsap 819888888</a></p>
+                <p><a href="#">Twitter: gofitOficial</a></p>
+            </div>
+            <div class="col-md-4">
+                <h4>Localização</h4>
+                <p>Estamos em frente a Praça Barão do Rio Branco
+                    Recife-PE cep 50020-360
+                    
+                </p>
+                <p>
+                    Aberto de Seg-Sab dás 8h as 20h
+                </p>
+                
+            </div>
+        </div>
+        <hr> <p class="fundo">Creat by CCRV Productions</p>
+        </div>
+    </section>
+    <script src="./js/index.js"></script>
 </body>
 </html>

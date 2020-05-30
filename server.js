@@ -8,9 +8,12 @@ require('dotenv/config');
 
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/img'));
+// app.use(express.static('public'));
+// Rotas para renderizar as pagians Webs
 app.use(routes);
 
-
+// EndPoints
 app.get('/listarAlunos',selects.buscarAlunos);
 
 app.get('/listarTreinos',selects.buscarTreinos);
@@ -21,7 +24,7 @@ app.get('/buscarAluno/:id',selects.buscarAlunoId);
 
 app.get('/buscarTreino/:id',selects.buscarTreinoId);
 
-app.post('/criarAluno',selects.criarALuno);//manda um json
+app.post('/criarAluno',selects.criarALuno);//precisa de um json
 
 var dia = new Date();
 console.log("Iniciando a API TecFit. "+String(dia.getDate()).padStart(2, '0')+"/"+String(dia.getMonth() + 1).padStart(2, '0')+"/"+dia.getFullYear()+" "+dia.getHours()+":"+dia.getMinutes()+":"+dia.getSeconds());
