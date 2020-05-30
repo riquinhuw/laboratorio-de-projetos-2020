@@ -15,4 +15,7 @@ router.get('/exercicio',(req,res)=>{
   res.sendFile(path.join(__dirname+'/public/exercicio.html'));
 });
 
+router.get('/rotas',(req,res)=>{
+  res.sendFile(path.join(__dirname+'/public/rotas.html'));
+});
 module.exports= router;

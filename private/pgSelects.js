@@ -48,3 +48,12 @@ exports.buscarTreinosPorAlunoId = async (req, res) => {
   const response = await client.query('SELECT * FROM alunos_treinos WHERE aluno_id  = $1', [alunoId]);
   res.status(200).send(response.rows);
 }
+
+exports.buscarAlunoPorLogin = async (req, res) => {
+  const usuario = req.params.usuario;
+  //console.log("USUARIO:"+usuario.user_id);
+  const response = await client.query('select * from alunos where username = $1', [usuario]);
+  var testePeloAmor = response.rows;
+  //console.log("TROUXE ISSO BB"+testePeloAmor[0]);
+  res.status(200).send(response.rows);
+}

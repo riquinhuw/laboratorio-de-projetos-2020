@@ -26,6 +26,8 @@ app.get('/buscarTreino/:id',selects.buscarTreinoId);
 
 app.post('/criarAluno',selects.criarALuno);//precisa de um json
 
+app.get('/login/:usuario',selects.buscarAlunoPorLogin);
+
 var dia = new Date();
 console.log("Iniciando a API TecFit. "+String(dia.getDate()).padStart(2, '0')+"/"+String(dia.getMonth() + 1).padStart(2, '0')+"/"+dia.getFullYear()+" "+dia.getHours()+":"+dia.getMinutes()+":"+dia.getSeconds());
 

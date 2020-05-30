@@ -14,23 +14,26 @@
         <section class="header">
             <div class="container">
                 <img src="../img/Logo1.png">
-                <button type="button" class="btn-login" onclick="direcionarHome();" >Voltar</button>
+
             </div>
+           
 
             <div class="login">
+                <button type="button" class="btn-login" id="voltar" onclick='direcionarHome()'>Voltar</button>
+                
                 <div class="form-box">
                     <div class="button-box">
                         <div id="btn"></div>
                         <button type="button" class="toggle-btn" onclick="login()">Entrar</button>
                         <button type="button" class="toggle-btn" onclick="cadastrar()">Cadastrar</button>
-    
+                        
                     </div>
                     <!--Formulario do Login-->
-                        <form id="login" class="input-group">
-                            <input type="text" class="input-field" placeholder="Nome de Usuario" required>
+                        <form id="login" class="input-group" >
+                            <input type="text" class="input-field" placeholder="Nome de Usuario" id='usuario' required >
                             <input type="text" class="input-field" placeholder="Senha" required>
                             <input type="checkbox" class="check-box"><span>Lembrar de mim</span>
-                            <button type="submit" class="submit-btn">Entrar</button>
+                            <button type="button" class="submit-btn" onclick="direcionarExercicio()">Entrar</button>
         
                         </form>
                     <!--Formulario do cadastrese-->
@@ -39,7 +42,7 @@
                             <input type="email" class="input-field" placeholder="Email" required>
                             <input type="text" class="input-field" placeholder="Senha" required>
                             <input type="checkbox" class="check-box"><span>Li e Concordo com os termos e condições</span>
-                            <button type="submit" class="submit-btn">Cadastrar</button>
+                            <button type="submit" class="submit-btn" onclick="direcionarExercicio()">Cadastrar</button>
         
                         </form>
                 </div> 
