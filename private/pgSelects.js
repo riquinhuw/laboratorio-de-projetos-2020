@@ -17,10 +17,10 @@ exports.buscarTreinos = async (req, res) => {
 }
 
 exports.criarALuno = async (req, res) => {
-  const { username,password,email,nome,idade } = req.body;
+  const { username,password,email,nome,idade,telefone } = req.body;
   const { rows } = await client.query(
-    "INSERT INTO products (username,password,email,nome,idade) VALUES ($1, $2, $3)",
-    [username,password,email,nome,idade]
+    "INSERT INTO products (username,password,email,nome,idade,telefone) VALUES ($1, $2, $3)",
+    [username,password,email,nome,idade,telefone]
   );
 
   res.status(201).send({

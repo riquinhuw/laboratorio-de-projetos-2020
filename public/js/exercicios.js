@@ -46,22 +46,36 @@ function httpGet(rota)
             //console.log(biscoito.idAluno);
             //console.log(xmlHttp.responseText);
             recebido = JSON.parse(xmlHttp.responseText);
-            recebido.forEach(treino => {
-                var checkbox1 = document.createElement('input');//
-                checkbox1.setAttribute('type','checkbox');
-                checkbox1.setAttribute("class","checkbox");
-                x.appendChild(checkbox1);
-                var textCamp = document.createElement('input');//
-                textCamp.setAttribute('type','text');
-                textCamp.setAttribute("class","input-exe");
-                textCamp.setAttribute("readonly","true");
-                listTipoTreino.forEach(tipo => {
-                    if(tipo.treino_id==treino.treino_id){
-                        textCamp.value=(tipo.nome);
-                    }
-                    
-                });
-                x.appendChild(textCamp);
+            recebido.forEach(treino => {//Varrendo a lista de treinos
+                if(!treino.realizado){//Se o treino não foi realizado
+                    var checkbox1 = document.createElement('input');//
+                    checkbox1.setAttribute('type','checkbox');
+                    checkbox1.setAttribute("class","checkbox");
+                    x.appendChild(checkbox1);
+                    var textCamp = document.createElement('input');//
+                    textCamp.setAttribute('type','text');
+                    textCamp.setAttribute("class","input-exe");
+                    textCamp.setAttribute("readonly","true");
+                    listTipoTreino.forEach(tipo => {
+                        if(tipo.treino_id==treino.treino_id){
+                            textCamp.value=(tipo.nome);
+                        }
+                        
+                    });
+                    x.appendChild(textCamp);
+                }else{
+                    var textCamp = document.createElement('input');//
+                    textCamp.setAttribute('type','text');
+                    textCamp.setAttribute("class","input-exe");
+                    textCamp.setAttribute("readonly","true");
+                    listTipoTreino.forEach(tipo => {
+                        if(tipo.treino_id==treino.treino_id){
+                            textCamp.value=(tipo.nome);
+                        }
+                    });
+                    y.appendChild(textCamp); 
+                }
+
             });
             
             var btnOk = document.createElement('button');//
@@ -80,7 +94,6 @@ function carregarTreino() {
     //z.appendChild(document.createElement('p'));
     var recebi = httpGet(getUrl.origin+"/buscarTreinosPorAluno/"+biscoito.idAluno);
     //console.log(recebi);
-
 }
 
 function getTreinos() {
@@ -96,4 +109,27 @@ function getTreinos() {
         }
     }
 }
+
+function carregarPerfil()
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", getUrl.origin+"/buscarAluno/"+biscoito.idAluno, true ); // false for synchronous request
+    xmlHttp.send( null );
+    xmlHttp.onreadystatechange = ()=>{
+        if (xmlHttp.readyState===4) {
+            //console.log("busquei");
+            //console.log(biscoito.idAluno);
+            //console.log(xmlHttp.responseText);
+            recebido = JSON.parse(xmlHttp.responseText);
+            document.getElementById("inputNome").value= recebido[0].nome;
+            document.getElementById("inputLogin").value= recebido[0].username;
+            document.getElementById("inputEmail").value= recebido[0].email;
+            document.getElementById("inputTelefone").value= recebido[0].telefone;
+            return xmlHttp.responseText;
+        }
+    }
+
+}
+
 getTreinos();
+carregarPerfil();
