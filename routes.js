@@ -18,4 +18,8 @@ router.get('/exercicio',(req,res)=>{
 router.get('/rotas',(req,res)=>{
   res.sendFile(path.join(__dirname+'/public/rotas.html'));
 });
+
+router.get('/mudarSenha',(req,res)=>{
+  res.sendFile(path.join(__dirname+'/public/senha.html'));
+});
 module.exports= router;

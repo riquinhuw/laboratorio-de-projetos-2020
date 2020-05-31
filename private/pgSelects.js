@@ -53,7 +53,18 @@ exports.buscarAlunoPorLogin = async (req, res) => {
   const usuario = req.params.usuario;
   //console.log("USUARIO:"+usuario.user_id);
   const response = await client.query('select * from alunos where username = $1', [usuario]);
-  var testePeloAmor = response.rows;
+  //var testePeloAmor = response.rows;
   //console.log("TROUXE ISSO BB"+testePeloAmor[0]);
   res.status(200).send(response.rows);
+}
+
+exports.alterarDadosPessoais = async (req, res) => {
+  const alunoId = parseInt(req.params.id);
+  const email = req.params.email;
+  const telefone = req.params.telefone;
+  const nome = req.params.nome;
+  // console.log(alunoId+email+telefone+nome);
+  const response = await client.query(`update alunos set nome = $4 ,email= $3 ,telefone = $2 where user_id = $1`, [alunoId,telefone,email,nome]);
+  //console.log(response);
+  res.status(201).send("Criado");
 }

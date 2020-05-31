@@ -131,5 +131,20 @@ function carregarPerfil()
 
 }
 
+function atualizarPerfil() {
+    console.log("tô tentando atualizar");
+    console.log(biscoito.idAluno+document.getElementById("inputNome").value+document.getElementById("inputTelefone").value+document.getElementById("inputEmail").value);
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "POST", getUrl.origin+"/updateCliente/"+biscoito.idAluno+"&"+document.getElementById("inputNome").value+"&"+document.getElementById("inputTelefone").value+"&"+document.getElementById("inputEmail").value, true ); // false for synchronous request
+    xmlHttp.send( null );
+    xmlHttp.onreadystatechange = ()=>{
+        if (xmlHttp.readyState===4) {
+            console.log("Cadastro Atualizado");
+            return "Atualizado";
+        }
+    }
+    alert("CLICOU VIu");
+}
+
 getTreinos();
 carregarPerfil();
