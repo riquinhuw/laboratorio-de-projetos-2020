@@ -122,7 +122,6 @@ function carregarPerfil()
             //console.log(xmlHttp.responseText);
             recebido = JSON.parse(xmlHttp.responseText);
             document.getElementById("inputNome").value= recebido[0].nome;
-            document.getElementById("inputLogin").value= recebido[0].username;
             document.getElementById("inputEmail").value= recebido[0].email;
             document.getElementById("inputTelefone").value= recebido[0].telefone;
             return xmlHttp.responseText;
@@ -143,7 +142,7 @@ function atualizarPerfil() {
             return "Atualizado";
         }
     }
-    alert("CLICOU VIu");
+    alert("Cadastro Atualizado");
 }
 
 getTreinos();

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/entrar.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script></head>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
     <title>GoFit</title>
 </head>
@@ -36,14 +36,15 @@
                             <button type="button" class="submit-btn" onclick="direcionarExercicio()">Entrar</button>
         
                         </form>
-                    <!--Formulario do cadastrese-->
+                    <!--Formulario de Cadastro-->
                         <form id="cadastrar" class="input-group">
-                            <input type="text" class="input-field" placeholder="Nome de Usuario" required>
-                            <input type="email" class="input-field" placeholder="Email" required>
-                            <input type="password" class="input-field" placeholder="Senha" required>
-                            <input type="checkbox" class="check-box"><span>Li e Concordo com os termos e condições</span>
-                            <button type="submit" class="submit-btn" onclick="direcionarExercicio()">Cadastrar</button>
-        
+                            <input type="text" class="input-field" placeholder="Nome" id="criarNome" required>
+                            <input type="text" class="input-field" placeholder="Idade" id="criarIdade" required>
+                            <input type="text" class="input-field" placeholder="Nome de Usuario" id="criarUsuario" required>
+                            <input type="email" class="input-field" placeholder="Email" id="criarEmail" required>
+                            <input type="text" class="input-field" placeholder="Telefone" id="criarTelefone" required>
+                            <input type="password" class="input-field" placeholder="Senha" id="criarSenha" required>
+                            <button type="button" class="submit-btn" onclick="criarUsuarioo()" >Cadastrar</button>
                         </form>
                 </div> 
                 

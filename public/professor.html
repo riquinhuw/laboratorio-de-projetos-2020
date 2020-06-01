@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/professor.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>GoFit</title>
+</head>
+<body>
+    <!--cabeçalho-->
+    <header>
+        <section class="header">
+            <div class="container">
+                <img src="../Logo1.png">
+                <button type="button" class="btn-login">Logout</button>
+            </div>
+
+            <div class="altsenha">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn">
+                            
+                        </div>
+                       
+                        <h3 class="titulo">Adicionar Exercicio</h3>
+    
+                    </div>
+                    <!--Formulario do Adicionar Exercicio-->
+                    <div class="adc-ex">
+                        <form id="grupo-exe" class="input-group">
+                            <input type="number" class="id-aluno" placeholder="ID"> 
+                            <input list="list-exe" class="list-exe" placeholder="Selecionar Exercicio"> 
+                            <datalist id="list-exe"> 
+                                <option value="Ex1"></option> 
+                                <option value="Ex2" ></option> 
+                                <option value="Ex3" ></option>  
+                                <option value="Ex4" ></option>  
+                                <option value="Ex5"></option> 
+                                <option value="Ex6" ></option>  
+                                <option value="Ex7"></option> 
+                                <option value="Ex8" ></option>  
+                                <option value="Ex9"></option> 
+                                <option value="Ex10" ></option>  
+                            </datalist>
+
+                            <button type="submit" class="submit-btn">Adicionar Exercicio</button>
+                        </form>
+                        
+                    </div> 
+
+                    <!--Formulario da Lista de Alunos-->
+
+                    <div class="alunos">
+                        <div class="button-box">
+                            <div id="btn">
+                                
+                            </div>
+                           
+                            <h3 class="titulo">Lista de Alunos</h3>
+        
+                        </div>
+                        <form id="grupo-exe" class="input-group">
+                            <input type="number" class="id-aluno" placeholder="ID"> 
+                            <input type="text" class="input-field" placeholder="NOME DO ALUNO KK" required>
+                            
+                            <input type="number" class="id-aluno" placeholder="ID"> 
+                            <input type="text" class="input-field" placeholder="NOME DO ALUNO KK" required>
+                            
+                            <input type="number" class="id-aluno" placeholder="ID"> 
+                            <input type="text" class="input-field" placeholder="NOME DO ALUNO KK" required>
+
+                            
+                        </form>
+
+                    </div>
+   
+                </div> 
+                
+            </div>
+           
+        </section>
+    </header>
+</body>
+</html>

@@ -19,16 +19,14 @@ exports.buscarTreinos = async (req, res) => {
 exports.criarALuno = async (req, res) => {
   const { username,password,email,nome,idade,telefone } = req.body;
   const { rows } = await client.query(
-    "INSERT INTO products (username,password,email,nome,idade,telefone) VALUES ($1, $2, $3)",
+    "INSERT INTO alunos (username,password,email,nome,idade,telefone) VALUES ($1, $2, $3, $4, $5, $6) RETURNING user_id",
     [username,password,email,nome,idade,telefone]
   );
-
-  res.status(201).send({
-    message: "Aluno criado com sucesso",
-    body: {
-      product: { username,password,email,nome,idade}
-    },
-  });
+  //console.log(username+password+email+nome+idade+telefone);
+  console.log("retorno de ID:"+rows[0].user_id);
+  var retornoId=rows[0].user_id;
+  //res.send(retornoId);
+  res.status(201).send({"id":retornoId,"suscesso":true});
 };
 
 exports.buscarAlunoId = async (req, res) => {
