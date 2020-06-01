@@ -43,7 +43,7 @@ function direcionarExercicio() {
  }
 
 function criarUsuarioo() {
-  console.log("criando um");
+  console.log("criando um usuario");
   var usuarioo = document.getElementById("criarUsuario").value;
   usuario = usuarioo;
   var senha = CryptoJS.MD5(document.getElementById("criarSenha").value);
@@ -58,9 +58,9 @@ function criarUsuarioo() {
   xmlHttp.send( JSON.stringify({ "username": usuarioo, "password":senha.toString() ,"email":email,"nome":nome,"idade":idade,"telefone":telefone}) );
   xmlHttp.onreadystatechange = ()=>{
       if (xmlHttp.readyState===4) {
-        //alert(JSON.parse(xmlHttp.response).id);//tras o ID
+        alert(JSON.parse(xmlHttp.response).id);//tras o ID
         document.cookie = `{"idAluno":"`+JSON.parse(xmlHttp.response).id+`"}`;
-        //alert("cookie:"+document.cookie);
+        alert("cookie:"+document.cookie);
         window.location.href = '/exercicio'; 
       }
   }

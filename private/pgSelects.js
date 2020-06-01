@@ -22,7 +22,7 @@ exports.criarALuno = async (req, res) => {
     "INSERT INTO alunos (username,password,email,nome,idade,telefone) VALUES ($1, $2, $3, $4, $5, $6) RETURNING user_id",
     [username,password,email,nome,idade,telefone]
   );
-  //console.log(username+password+email+nome+idade+telefone);
+  console.log(username+password+email+nome+idade+telefone);
   console.log("retorno de ID:"+rows[0].user_id);
   var retornoId=rows[0].user_id;
   //res.send(retornoId);

@@ -35,7 +35,7 @@ function direcionarHome() {
   }
 
 
-function listarTreinosWeb(rota)
+function httpGet(rota)
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", rota, true ); // false for synchronous request
@@ -92,7 +92,7 @@ function listarTreinosWeb(rota)
 
 function carregarTreino() {
     //z.appendChild(document.createElement('p'));
-    var recebi = listarTreinosWeb(getUrl.origin+"/buscarTreinosPorAluno/"+biscoito.idAluno);
+    var recebi = httpGet(getUrl.origin+"/buscarTreinosPorAluno/"+biscoito.idAluno);
     //console.log(recebi);
 }
 
