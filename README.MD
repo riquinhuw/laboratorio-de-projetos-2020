@@ -43,3 +43,6 @@ Para que a consulta do banco seja feita precisamos configurar a conexão, que es
 Feito por:
 
 ![logo lateral](https://user-images.githubusercontent.com/24635144/83213346-4a98f480-a138-11ea-9313-7e269714f76a.png)
+
+
+Alterei porque estou gravando um video!
